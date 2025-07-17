@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonMath - Solana X-Gains Calculator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌙 MoonMath</h1>
+            <p class="subtitle">Solana X-Gains Calculator</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="tokenAddress">Token Address (Solana)</label>
+                <input type="text" id="tokenAddress" placeholder="Enter Solana token address...">
+                <button id="fetchTokenData" class="btn-secondary">Fetch Data</button>
+            </div>
+
+            <div class="token-info" id="tokenInfo" style="display: none;">
+                <h3 id="tokenName">Token Name</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Current Price:</label>
+                        <span id="currentPrice">$0.00</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Market Cap:</label>
+                        <span id="marketCap">$0</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Total Supply:</label>
+                        <span id="totalSupply">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-section">
+                <h3>Calculate X-Gains</h3>
+                
+                <div class="input-group">
+                    <label for="targetMarketCap">Target Market Cap ($)</label>
+                    <input type="number" id="targetMarketCap" placeholder="e.g., 1000000000">
+                </div>
+
+                <div class="input-group">
+                    <label for="investmentAmount">Your Investment ($)</label>
+                    <input type="number" id="investmentAmount" placeholder="e.g., 1000">
+                </div>
+
+                <button id="calculateGains" class="btn-primary">Calculate X-Gains</button>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <h3>Results</h3>
+            <div class="results-grid">
+                <div class="result-item highlight">
+                    <label>Potential X-Gains:</label>
+                    <span id="xGains" class="large-text">0x</span>
+                </div>
+                <div class="result-item">
+                    <label>Target Price:</label>
+                    <span id="targetPrice">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <label>Potential Value:</label>
+                    <span id="potentialValue">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <label>Potential Profit:</label>
+                    <span id="potentialProfit">$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="presets-section">
+            <h4>Quick Market Cap Targets</h4>
+            <div class="preset-buttons">
+                <button class="preset-btn" data-mcap="1000000">1M</button>
+                <button class="preset-btn" data-mcap="10000000">10M</button>
+                <button class="preset-btn" data-mcap="100000000">100M</button>
+                <button class="preset-btn" data-mcap="1000000000">1B</button>
+                <button class="preset-btn" data-mcap="10000000000">10B</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>⚠️ Not financial advice. DYOR.</p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

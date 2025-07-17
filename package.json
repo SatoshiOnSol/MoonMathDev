@@ -1,0 +1,31 @@
+{
+  "name": "moonmath-extension",
+  "version": "1.0.0",
+  "description": "A Chrome extension for calculating potential x-gains on Solana tokens based on market cap projections",
+  "main": "popup.js",
+  "scripts": {
+    "build": "echo 'No build process needed for this extension'",
+    "test": "echo 'No tests yet'",
+    "lint": "echo 'Linting would go here'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "solana",
+    "cryptocurrency",
+    "x-gains",
+    "market-cap",
+    "calculator",
+    "trading",
+    "defi"
+  ],
+  "author": "MoonMath Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/moonmath-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/moonmath-extension/issues"
+  },
+  "homepage": "https://github.com/yourusername/moonmath-extension#readme"
+}
